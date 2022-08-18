@@ -5,7 +5,7 @@
   font-style: normal;
 }
 
-:root {
+* {
   box-sizing: border-box;
 }
 
@@ -13,6 +13,7 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
 }
 
 a {
@@ -21,7 +22,7 @@ a {
 
 .container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .left {
@@ -48,25 +49,128 @@ a {
   font-size: 12vh;
 }
 
-.right {
-  display: flex;
-  flex-direction: column;
-  flex: 1.7;
-}
-
 .credit {
   position: absolute;
   bottom: 0px;
   width: 100%;
   padding: 10px;
   color: #fff;
-  font-family: sans-serif;
   font-size: 1.8vh;
   text-align: center;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex: 1.7;
+  background-color: #F9FAFB;
+}
+
+.text {
+  height: 22vh;
+  margin-top: 13vh;
+  font-size: max(2.5vh, 0px);
+  font-weight: bold;
+  line-height: 3vh;
+}
+
+.form-container {
+  background-color: #fff;
+  box-shadow: 5px 5px 10px 2px rgba(150, 150, 150, 0.25);
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+.bottom {
+  padding: 5vh 5vw 0;
+  font-size: max(2vh, 10px);
+}
+
+button {
+  appearance: none;
+  border-radius: 8px;
+  height: 50px;
+  width: 200px;
+  margin-bottom: 1vh;
+  color: #fff;
+  background-color: #596D48;
+  border: none;
+  box-shadow: 2px 2px 5px 1px rgba(150, 150, 150, 0.85);
+  font-weight: bold;
+  font-size: max(2vh, 10px);
+  transition: all 0.1s ease;
+}
+
+button:hover {
+  background-color: #71865e;
+}
+
+button:active {
+  background-color: #4f613f;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  color: #555;
+  font-size: max(1.5vh, 10px);
+  font-weight: bold;
+}
+
+input {
+  appearance: none;
+  height: max(3.5vh, 30px);
+  width: max(20vw, 200px);
+  margin-top: 5px;
+  padding: 0px 10px;
+  border: 1px solid #E5E7EB;
+  border-radius: 5px;
+  font-size: max(1.8vh, 15px);
+  transition: all 0.2s ease;
+}
+
+input:hover {
+  border-color: #a6b6e4;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6E8CE2;
+  box-shadow: 2px 2px 5px 1px rgba(150, 150, 150, 0.15);
+}
+
+input.error {
+  border: 2px solid rgb(255, 0, 0);
+}
+
+input.error+span::after {
+  display: block;
+  content: "* Passwords do not match";
+  color: rgb(255, 0, 0);
+  font-weight: normal;
 }
 
 ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+li {
+  display: flex;
+  padding-bottom: 1.5vw;
+  gap: 5vw;
+}
+
+.login {
+  color: #596D48;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.text,
+.form-container,
+.bottom {
+  padding-left: 3vw;
+  padding-right: 5vw;
 }
