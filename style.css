@@ -97,7 +97,7 @@ button {
   border: none;
   box-shadow: 2px 2px 5px 1px rgba(150, 150, 150, 0.85);
   font-weight: bold;
-  font-size: max(2vh, 10px);
+  font-size: clamp(10px, 2vh, 20px);
   transition: all 0.1s ease;
 }
 
