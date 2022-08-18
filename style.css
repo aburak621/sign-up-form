@@ -126,7 +126,7 @@ input {
   border: 1px solid #E5E7EB;
   border-radius: 5px;
   font-size: max(1.8vh, 15px);
-  transition: all 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
 input:hover {
