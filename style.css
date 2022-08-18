@@ -1,0 +1,30 @@
+:root {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+}
+
+.transparent {
+  display: flex;
+}
+
+.left {
+  background-image: url(img/leaves.jpg);
+  flex: 1;
+}
+
+.right {
+  flex: 2;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
